@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ヘッダー -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_weight="1.5"
+        android:layout_height="0dp"
+        android:padding="@dimen/padding_small" >
+
+        <TextView
+            android:id="@+id/search_view_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="Header" />
+
+    </LinearLayout>
+
+    <!-- コンテンツ -->
+    <ViewFlipper
+        android:id="@+id/search_view_viewflipper"
+        android:layout_width="match_parent"
+        android:layout_weight="7"
+        android:layout_height="0dp"
+        android:padding="@dimen/padding_medium">
+
+        <!-- ビュー1:トップ画面 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="TOP PAGE"
+            android:textSize="20sp" />
+
+        <!-- ビュー2:検索結果一覧 -->
+
+        <!-- ビュー3:歌詞表示画面 -->
+
+    </ViewFlipper>
+
+    <!-- フッター -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1.5"
+        android:layout_height="0dp"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:id="@+id/search_view_footer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Footer" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c8000000"
+    android:padding="@dimen/padding_medium">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0ffffff">
+
+        <TextView
+            android:id="@+id/search_window_header"
+            android:layout_width="match_parent"
+            android:layout_weight="1.5"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="文字を入力して検索" />
+
+        <ViewFlipper
+            android:id="@+id/search_window_viewflipper"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="0dp"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <!-- ビュー1:文字を入力して検索 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/search_windows_edittext_artist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="20sp"
+                    android:hint="歌手名"
+                    android:maxLength="20" />
+
+                <EditText
+                    android:id="@+id/search_windows_edittext_track"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="20sp"
+                    android:hint="曲名"
+                    android:maxLength="20" />
+
+                <EditText
+                    android:id="@+id/search_windows_edittext_phrase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="20sp"
+                    android:hint="歌詞"
+                    android:maxLength="20" />
+
+            </LinearLayout>
+
+            <!-- ビュー2:再生中の曲で検索 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:background="#8f808080">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="再生中の曲"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="Artist"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
+                    android:layout_height="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="Track"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </ViewFlipper>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/search_window_search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="検索" />
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="1.5"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_small">
+
+                <Button
+                    android:id="@+id/search_window_button_for_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="A"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_small">
+
+                <Button
+                    android:id="@+id/search_window_button_for_playing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="♪"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+</LinearLayout>
