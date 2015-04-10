@@ -2,6 +2,7 @@ package jp.ne.noise.lyrie.search.view;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -47,6 +48,12 @@ public class SearchWindow extends LinearLayout {
         shown = true;
         searchMode = SEARCH_MODE_TEXT;
         args = new String[3];
+    }
+
+    public SearchWindow(Context context, AttributeSet attrs) {
+        super(context, attrs);
+
+        LayoutInflater.from(context).inflate(R.layout.search_window, this);
     }
 
     private void setListener() {

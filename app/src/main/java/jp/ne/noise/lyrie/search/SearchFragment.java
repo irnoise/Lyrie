@@ -1,4 +1,4 @@
-package jp.ne.noise.lyrie;
+package jp.ne.noise.lyrie.search;
 
 
 import android.app.Activity;
@@ -7,10 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import jp.ne.noise.lyrie.MainActivity;
+import jp.ne.noise.lyrie.R;
+import jp.ne.noise.lyrie.UIActionListener;
 import jp.ne.noise.lyrie.search.view.SearchWindow;
 
 
